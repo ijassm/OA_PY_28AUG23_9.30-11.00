@@ -1,0 +1,12 @@
+##for i in range(1,11,2):
+##    print("hello", i)
+
+##for i in range(10,0,-2):
+##    print("hello", i)
+
+##for i in range(1,101):
+##    if(i % 5 == 0):
+##        print("bus", i)
+##    else:
+##        print("pass", i)
+    

@@ -25,8 +25,10 @@ persons = [
 
 # print(fullname)
 
-for i in persons:
-    print(i, "\n")
+# for i in persons:
+#     print(i, "\n")
 
 
 # print(persons)
+
+# person = {}

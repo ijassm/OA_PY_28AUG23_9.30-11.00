@@ -1,3 +1,4 @@
+import functools
 # l = [1, 2, 4, 6, 8]
 
 
@@ -12,7 +13,7 @@
 
 # ---------------------------------
 
-l = [1, 2, 4, 6, 8]
+# l = [1, 2, 4, 6, 8]
 
 
 # def double(l):
@@ -52,7 +53,7 @@ l = [1, 2, 4, 6, 8]
 # print(quadruple(l))
 # print(quintuple(l))
 
-def hof(l, logicFunc):
+def hof(logicFunc, l):
     l = [*l]
     result = []
     for i in l:
@@ -75,13 +76,33 @@ def hof(l, logicFunc):
 # def quintuple(i):
 #     return i * 5
 
+l = [1, 2, 4, 6, 8]
 
-d = hof(l, lambda i: i * 2)
-t = hof(l, lambda i: i * 3)
-qd = hof(l, lambda i: i * 4)
-qt = hof(l, lambda i: i * 5)
+d = hof(lambda i: i * 2, l)
+t = hof(lambda i: i * 3, l)
+qd = hof(lambda i: i * 4, l)
+qt = hof(lambda i: i * 5, l)
 
-print(d)
-print(t)
-print(qd)
-print(qt)
+print()
+
+map_d = map(lambda i: i * 2, l)
+filter = filter(lambda i: i > 4, l)
+reduce = functools.reduce(lambda acc, element: acc + element, l)
+
+# acc   element   acc
+# 0   +   1     =  1
+# 1   +   2     =  3
+# 3   +   4     =  7
+# 7   +   6     =  13
+# 13  +   8     =  21
+
+# = 21
+
+# print(list(filter))
+print(reduce)
+
+# print(d)
+# print(list(map_d))
+# print(t)
+# print(qd)
+# print(qt)

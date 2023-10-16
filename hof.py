@@ -99,10 +99,13 @@ reduce = functools.reduce(lambda acc, element: acc + element, l)
 # = 21
 
 # print(list(filter))
-print(reduce)
+# print(reduce)
 
 # print(d)
 # print(list(map_d))
 # print(t)
 # print(qd)
 # print(qt)
+
+
+# print("file ended")

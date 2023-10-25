@@ -12,25 +12,60 @@
 # print(obj2)
 
 
+# class Person:
+#     pass
+
+
+# obj1 = Person()
+# obj2 = Person()
+
+
+# print(id(obj1))
+# print(id(obj2))
+
+
+# def getDetails(self):
+#     print("-----Details-----")
+#     print(self.name)
+#     print(self.age)
+#     print("----Details End-----")
+
+
+# obj1.name = "abc"
+# obj1.age = 20
+# obj1.getDetails = getDetails
+
+
+# obj1.getDetails(obj1)
+
+
+# obj2.name = "xyz"
+# obj2.age = 15
+
+# print(obj1.name)
+# print(obj1.age, "\n")
+
+# print(obj2.name)
+# print(obj2.age)
+
+
 class Person:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.school = "imaculate"
+
+    def getDetails(self):
+        print("-----Details-----")
+        print(self.name)
+        print(self.age)
+        print(self.school)
+        print("----Details End-----")
 
 
-obj1 = Person()
-obj2 = Person()
+obj1 = Person("ocean", 15)
+obj2 = Person("xyz", 10)
 
-
-print(id(obj1))
-print(id(obj2))
-
-obj1.name = "abc"
-obj1.age = 20
-
-obj2.name = "xyz"
-obj2.age = 15
-
-print(obj1.name)
-print(obj1.age, "\n")
-
-print(obj2.name)
-print(obj2.age)
+print(obj1)
+obj1.getDetails()
+obj2.getDetails()

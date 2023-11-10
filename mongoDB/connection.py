@@ -2,6 +2,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import datetime
 from constant import USERNAME, PASSWORD
+from bson import ObjectId
 
 
 uri = f"mongodb+srv://{USERNAME}:{PASSWORD}@oa.lybaz26.mongodb.net/?retryWrites=true&w=majority"
@@ -16,9 +17,9 @@ try:
 except Exception as e:
     print(e)
 
-# db = client["PY_DB"]
+db = client["PY_DB"]
 
-# students = db["Students"]
+students = db["Students"]
 
 # doc = {
 #     "name": "xyz",
@@ -34,11 +35,11 @@ except Exception as e:
 #     "createdAt": datetime.datetime.now(),
 # }
 
-# create(adding single document)
+###### create(adding single document)
 
 # students.insert_one(doc)
 
-# create(adding multiple document)
+###### create(adding multiple document)
 
 # data = [
 #     {
@@ -109,3 +110,48 @@ except Exception as e:
 # ]
 
 # students.insert_many(data)
+
+# read(finding one document)
+
+# query = {"age": 25}
+
+# unique id
+# query = {"_id": ObjectId("6549cf208cf1361886fa3539")}
+
+
+# getData = students.find_one(query)
+
+# print(getData)
+
+####### read(finding many documents)
+
+# query = {"age": 25}
+
+# getDatas = students.find(query)
+
+# print(list(getDatas))
+
+##### update data
+# id = input("enter your id: ")
+
+
+# try:
+#     query = {"_id": ObjectId(id)}
+#     age = int(input("enter your age to update: "))
+#     update = {"$set": {"age": age}}
+#     obj = students.update(query, update)
+#     print("updated successfully", obj)
+# except Exception as e:
+#     # print(e)
+#     print("id is invalid please try again")
+
+
+# students.update_one(query)
+
+#####update many
+
+query = {"age": 30}
+update = {"$set": {"age": 25}}
+
+
+students.update_many(query, update)

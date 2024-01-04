@@ -150,8 +150,21 @@ students = db["Students"]
 
 #####update many
 
-query = {"age": 30}
-update = {"$set": {"age": 25}}
+# query = {"age": 30}
+# update = {"$set": {"age": 25}}
 
 
-students.update_many(query, update)
+# students.update_many(query, update)
+
+###### delete one
+
+# query = {"_id": ObjectId("6549cd566d16cb17e7a03c34")}
+
+# students.delete_one(query)
+
+###### delete many
+# query = {"age": 25}
+
+# students.delete_many({})
+
+# students.drop()

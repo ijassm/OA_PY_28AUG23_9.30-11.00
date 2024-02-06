@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main+h1+p,
+        main+h1+p+h2+p {
+            color: blueviolet;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>1 Hello am inside main am direct child</p>
+        <article>
+            <p>2 Hello am inside main am indirect child</p>
+        </article>
+        <main>
+            <p>3 hello</p>
+        </main>
+    </main>
+    <h1>4 Hello am outside main</h1>
+    <p>5 Hello am outside main</p>
+    <h2>-------------</h2>
+    <p>5 Hello am outside main</p>
+
+</body>
+
+</html>

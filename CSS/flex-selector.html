@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: rgb(196, 196, 196);
+            background-color: rgb(227, 227, 227);
         }
 
         .flex-container {
@@ -34,6 +34,10 @@
             flex-grow: 1;
             background-color: white;
             border-radius: 10px;
+        }
+
+        .flex-item:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .flex-item-image {
@@ -80,6 +84,20 @@
             object-fit: cover;
             border-radius: 50%;
         }
+
+        .btn {
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            font-size: 20px;
+            padding-block: 20px;
+            text-align: center;
+            background-color: brown;
+        }
+
+        .btn:hover {
+            background-color: rgb(119, 0, 0);
+        }
     </style>
 </head>
 
@@ -119,6 +137,7 @@
                     </div>
                 </div>
             </article>
+            <div class="btn">View details</div>
         </section>
         <section class="flex-item">
             <img src="https://imageio.forbes.com/specials-images/imageserve/64a871d541cbad2afbb4dddc/Estate/960x0.jpg?format=jpg&width=960"
@@ -154,6 +173,7 @@
                     </div>
                 </div>
             </article>
+            <div class="btn">View details</div>
         </section>
         <section class="flex-item">
             <img src="https://imageio.forbes.com/specials-images/imageserve/64a871d541cbad2afbb4dddc/Estate/960x0.jpg?format=jpg&width=960"
@@ -189,6 +209,7 @@
                     </div>
                 </div>
             </article>
+            <div class="btn">View details</div>
         </section>
     </main>
 </body>

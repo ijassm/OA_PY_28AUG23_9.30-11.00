@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            letter-spacing: 2px;
+        }
+
+        p.quote::before {
+            content: "Catch ";
+            display: inline-block;
+            height: 20px;
+            /* width: 20px; */
+            padding-inline: 10px;
+            padding-block: 2px;
+            background-color: blueviolet;
+            font-size: 20px;
+            color: white;
+            margin-block: 5px;
+        }
+
+        p.quote::after {
+            content: " wheels";
+            display: inline-block;
+            height: 20px;
+            /* width: 20px; */
+            padding-inline: 10px;
+            padding-block: 2px;
+            background-color: blueviolet;
+            font-size: 20px;
+            color: white;
+            margin-block: 5px;
+        }
+
+        span {
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        h3::after {
+            content: "By Gowdham";
+            color: deeppink;
+        }
+
+        ::marker {
+            color: blueviolet;
+        }
+
+        li {
+            list-style-type: decimal;
+        }
+
+        ::selection {
+            background-color: chartreuse;
+        }
+
+        .para::first-letter {
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        .para::first-line {
+            background-color: rgba(210, 105, 30, 0.588);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="quote"> your <span>dreams</span> with your own </p>
+    <h3>Author Name - </h3>
+    <ul>
+        <li>Apple</li>
+        <li>Cherry</li>
+    </ul>
+
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic officiis in eius adipisci cupiditate
+        reprehenderit
+        accusamus, assumenda quibusdam. Rem necessitatibus dolore beatae at ratione officia qui atque aliquid, harum
+        est Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur vitae minima! Magnam neque
+        dicta facilis quos ipsa adipisci quis, tempore et fuga. Officia totam, magni repellat assumenda fugit tempore?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sed voluptate nostrum reiciendis reprehenderit
+        quidem repudiandae fugiat provident doloremque asperiores, quos neque, deleniti vitae nulla officiis. Saepe
+        error magnam harum.
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+        }
+
+        .box1 {
+            position: relative;
+            background-color: blueviolet;
+        }
+
+        .box2 {
+            position: relative;
+            top: -50px;
+            left: 50px;
+            background-color: brown;
+        }
+
+        .box3 {
+            position: relative;
+            top: -100px;
+            left: 100px;
+            background-color: chocolate;
+        }
+
+        .box4 {
+            position: relative;
+            margin: 100px auto;
+            background-color: chocolate;
+            box-shadow: -100px 100px black, 100px 100px green, -100px -100px green, 100px -100px 0px 1px black;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .box5 {
+            position: relative;
+            margin: 100px auto;
+            background-color: chocolate;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 0px rgba(255, 106, 0, 0.484);
+            rotate: 60deg;
+            transition: 0.4s;
+        }
+
+        .box5:hover {}
+
+        .box5::before {
+            position: relative;
+            top: -30px;
+            content: "";
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            border-radius: 50%;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="box box1"></main>
+    <main class="box box2"></main>
+    <main class="box box3"></main>
+    <hr>
+    <main class="box box4"></main>
+    <hr>
+    <main class="parent">
+        <main class="box box5"></main>
+    </main>
+</body>
+
+</html>

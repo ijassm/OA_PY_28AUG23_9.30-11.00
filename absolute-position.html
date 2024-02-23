@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            min-height: 200vh;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+        }
+
+        .absolute {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            /* transform: translate(); */
+            translate: -50% -50%;
+            top: 50%;
+            left: 50%;
+            background-color: aqua;
+        }
+
+        .fixed {
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 50%;
+            background-color: chocolate;
+        }
+
+        .relative {
+            position: relative;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="absolute"></div>
+    <div class="fixed"></div>
+    <div class="relative box"></div>
+</body>
+
+</html>

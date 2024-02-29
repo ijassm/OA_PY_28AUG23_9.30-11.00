@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 200px;
+            width: 200px;
+            border: 25px solid #00007B;
+            border-radius: 50%;
+            animation: Rotate 1s linear infinite;
+
+        }
+
+        .circle::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 30px;
+            width: 30px;
+            background-color: #00007B;
+            border-radius: 50%;
+
+        }
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: inherit;
+            width: 10px;
+            background-color: #00007B;
+        }
+
+        .line::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            rotate: 60deg;
+            height: inherit;
+            width: inherit;
+            background-color: #00007B;
+        }
+
+        .line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            rotate: -60deg;
+            height: inherit;
+            width: inherit;
+            background-color: #00007B;
+        }
+
+
+        @keyframes Rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(350deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle">
+        <div class="line"></div>
+    </div>
+
+</body>
+
+</html>

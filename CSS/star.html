@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary: #926927;
+            --secondary: #F88140;
+            --circle: 18px;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0%;
+            background-color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: Rotate 1s linear infinite;
+        }
+
+        .row {
+            display: flex;
+            gap: 5px;
+            margin-block: 1px;
+        }
+
+        .circle {
+            height: var(--circle);
+            width: var(--circle);
+            border-radius: 50%;
+            background-color: var(--secondary);
+        }
+
+
+        @keyframes Rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(350deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="line1 row">
+            <div class="circle"></div>
+        </div>
+        <div class="line2 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line3 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line4 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line5 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line6 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line7 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line8 row">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="line9 row">
+            <div class="circle"></div>
+        </div>
+    </main>
+</body>
+
+</html>

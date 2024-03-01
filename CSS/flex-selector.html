@@ -18,19 +18,56 @@
             background-color: rgb(227, 227, 227);
         }
 
+        nav {
+            background-color: whitesmoke;
+            color: brown;
+        }
+
+        nav>.max-width {
+            max-width: 1600px;
+            margin-inline: auto;
+        }
+
+        nav .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .routes {
+            display: none;
+        }
+
+        .navbar .routes * {
+            margin-inline: 20px;
+            cursor: pointer;
+        }
+
+        .navbar .routes *:hover {
+            color: rgb(255, 3, 3);
+        }
+
+        .navbar .logo {
+            max-width: 150px;
+        }
+
+        /* .navbar .menu {
+            display: block;
+        } */
+
         .flex-container {
             display: flex;
             gap: 20px;
             justify-content: center;
-            max-width: 1400px;
+            max-width: 1600px;
             margin-inline: auto;
             flex-wrap: wrap;
             width: 95%;
-
+            margin-block: 50px;
         }
 
         .flex-item {
-            flex-basis: 400px;
+            flex-basis: 100%;
             flex-grow: 1;
             background-color: white;
             border-radius: 10px;
@@ -98,11 +135,92 @@
         .btn:hover {
             background-color: rgb(119, 0, 0);
         }
+
+        /* @media (max-width: 1500px) {
+            .flex-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .flex-item {
+                flex-basis: 100%;
+            }
+        } */
+
+        @media (min-width: 800px) {
+            .flex-item {
+                flex-basis: calc(50% - 20px);
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .navbar .routes {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .flex-item {
+                flex-basis: calc(25% - 20px);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <nav>
+        <section class="navbar max-width">
+            <img class="logo" src="https://purepng.com/public/uploads/large/amazon-logo-s3f.png" alt="logo"
+                width="100%">
+            <div class="routes">
+                <span>HOME</span>
+                <span>ABOUT</span>
+                <span>CONTACT US</span>
+                <span class="login-btn">Login</span>
+            </div>
+            <div class="menu">Menu</div>
+        </section>
+    </nav>
     <main class="flex-container">
+        <section class="flex-item">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/64a871d541cbad2afbb4dddc/Estate/960x0.jpg?format=jpg&width=960"
+                alt="house" width="100%" />
+            <article class="layer1">
+                <p class="layer1-title">
+                    DETACHED HOUSE * 15Y OLD
+                </p>
+                <p>$56 Million</p>
+                <p>742 Malibu, California</p>
+            </article>
+            <hr />
+            <article class="layer2">
+                <div class="layer2-icon">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>8 Bedrooms</span>
+                </div>
+                <div class="layer2-icon">
+                    <i class="fa-solid fa-bath"></i>
+                    <span>5 Bathrooms</span>
+                </div>
+            </article>
+            <hr />
+            <article class="layer3">
+                <p>REALTOR</p>
+                <div class="layer3-profile">
+                    <img class="layer3-profile-avatar"
+                        src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY="
+                        alt="profile" width="100%" />
+                    <div>
+                        <article>Tiffany Heffner</article>
+                        <article>(555) 555-4321</article>
+                    </div>
+                </div>
+            </article>
+            <div class="btn">View details</div>
+        </section>
         <section class="flex-item">
             <img src="https://imageio.forbes.com/specials-images/imageserve/64a871d541cbad2afbb4dddc/Estate/960x0.jpg?format=jpg&width=960"
                 alt="house" width="100%" />

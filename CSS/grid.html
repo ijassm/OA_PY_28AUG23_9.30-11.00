@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            /* grid-template-columns: repeat(3, auto); */
+            grid-template-columns: repeat(2, 1fr) 2fr 2fr;
+            /* grid-template-rows: 100px 200px; */
+            /* grid-auto-rows: 100px; */
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .grid-item {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            /* height: 100px; */
+            /* width: 100px; */
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            background-color: blueviolet;
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="grid">
+        <div class="grid-item">
+            <h3>1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>7</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+        <div class="grid-item">
+            <h3>8</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam temporibus eaque voluptatum veniam
+                maiores asperiores alias praesentium? Vitae eaque ipsam ipsum aliquid necessitatibus odit repudiandae
+                sunt enim quae possimus.</p>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-gallery</title>
+    <style>
+        body {
+            margin: 0%;
+            font-family: cursive;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: 100px; */
+            gap: 10px;
+            max-width: 1200px;
+            width: 95%;
+            margin-inline: auto;
+        }
+
+        .grid-item {
+            height: 200px;
+            background-color: aqua;
+
+        }
+
+        .grid-item1 {
+            height: auto;
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            background-image: url("https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+        }
+
+        .grid-item2 {
+            height: 500px;
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-row: 1 / 3;
+            background-image: url("https://images.pexels.com/photos/906531/pexels-photo-906531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+        }
+
+        .grid-item3 {
+            height: auto;
+            /* grid-row-start: 3;
+            grid-row-end: 5; */
+            grid-row: 3 / 5;
+        }
+
+        .grid-item4 {
+            height: 500px;
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 5; */
+            grid-column: 2 / 4;
+            grid-row: 3 / 5;
+        }
+
+        .grid-item5 {
+            height: auto;
+            /* grid-row-start: 5;
+            grid-row-end: 6; */
+            grid-row: 5 / 7;
+        }
+
+        .grid-item6 {
+            /* height: 500px; */
+            /* grid-row-start: 5;
+            grid-row-end: 6; */
+            /* grid-row: 5 / 6; */
+        }
+
+        .grid-item7 {
+            /* height: auto; */
+            /* grid-row-start: 5;
+            grid-row-end: 6; */
+            /* grid-row: 5 / 6; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Responsive Grid Gallery</h1>
+    <main class="grid-gallery">
+        <section class="grid-item1 grid-item">1</section>
+        <section class="grid-item2 grid-item">2</section>
+        <section class="grid-item3 grid-item">3</section>
+        <section class="grid-item4 grid-item">4</section>
+        <section class="grid-item5 grid-item">5</section>
+        <section class="grid-item6 grid-item">6</section>
+        <section class="grid-item7 grid-item">7</section>
+        <section class="grid-item8 grid-item">8</section>
+        <section class="grid-item9 grid-item">9</section>
+    </main>
+</body>
+
+</html>

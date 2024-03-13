@@ -1,0 +1,16 @@
+$f1: 15px;
+$f2: 50+50px;
+
+h1 {
+  background-color: red;
+  span {
+    font-size: $f1;
+  }
+}
+
+p {
+  color: blue;
+  span {
+    font-size: $f2;
+  }
+}

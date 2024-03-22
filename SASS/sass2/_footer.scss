@@ -1,4 +1,15 @@
 footer {
-  height: 500px;
   background-color: $bg-primary;
+  color: $text-white;
+  text-align: center;
+  padding-block: 30px;
+
+  .content-wrapper {
+    max-width: 600px;
+  }
+
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
 }

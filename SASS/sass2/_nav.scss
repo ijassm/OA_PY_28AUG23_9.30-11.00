@@ -11,6 +11,7 @@ nav {
   .center-routes {
     > * {
       margin-inline: 10px;
+      cursor: pointer;
     }
 
     #Services {
@@ -33,5 +34,26 @@ nav {
     .outline-btn {
       border: 1px solid $bg-white;
     }
+  }
+
+  .menu {
+    display: none;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: flex !important;
+  }
+
+  .right-routes {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .center-routes {
+    display: none !important;
   }
 }

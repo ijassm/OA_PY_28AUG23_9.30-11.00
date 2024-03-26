@@ -4,99 +4,88 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-block: 50px;
-}
+  @extend .max-width;
 
-.flex-item {
-  flex-basis: 100%;
-  flex-grow: 1;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.2s;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.flex-item:hover {
-  border: 2px solid $bg-primary;
-  //   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.flex-item-image {
-  border-radius: 10px 10px 0 0;
-  height: 250px;
-  object-fit: cover;
-}
-
-.layer1 {
-  padding-inline: 20px;
-}
-
-.layer1-title {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.layer2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.layer2-icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.layer3 {
-  padding-inline: 20px;
-  padding-bottom: 20px;
-}
-
-.layer3-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.layer3-profile-avatar {
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.btn {
-  cursor: pointer;
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  padding-block: 20px;
-  text-align: center;
-  background-color: brown;
-}
-
-.btn:hover {
-  background-color: rgb(119, 0, 0);
-}
-
-@media (min-width: 800px) {
   .flex-item {
-    flex-basis: calc(50% - 20px);
+    flex-basis: 100%;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid $bg-primary;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .layer1 {
+      padding-inline: 20px;
+
+      .layer1-title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .layer2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+
+      .layer2-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .layer3 {
+      padding-inline: 20px;
+      padding-bottom: 20px;
+
+      .layer3-profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .layer3-profile-avatar {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .btn {
+      @include btn(white, $bg-primary);
+    }
+
+    .btn:hover {
+      background-color: rgb(119, 0, 0);
+    }
   }
 
-  .navbar .menu {
-    display: none;
+  @media (min-width: 800px) {
+    .flex-item {
+      flex-basis: calc(50% - 20px);
+    }
+
+    .navbar .menu {
+      display: none;
+    }
+
+    .navbar .routes {
+      display: block;
+    }
   }
 
-  .navbar .routes {
-    display: block;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-item {
-    flex-basis: calc(25% - 20px);
+  @media (min-width: 1200px) {
+    .flex-item {
+      flex-basis: calc(25% - 20px);
+    }
   }
 }

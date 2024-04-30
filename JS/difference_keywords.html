@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+    <script>
+        /*
+
+        // TDZ - ❌
+        // console.log(a);
+
+        // var is a functional scope
+        var a = "outside-block";
+
+        // reassignable ✔
+        a = "some-block";
+
+
+        // console.log(window.a);
+        // console.log(a);
+
+
+        {
+            // block scope - ❌
+            // redeclarable ✔
+            var a = "inside-block";
+        }
+
+        console.log(a);
+
+        */
+
+
+        // ------------------------------------------------
+
+        /*
+
+        // TDZ ✔
+        // console.log(a);
+
+        let a = "some-block";
+
+        // reassignable ✔
+        a = "outside-block";
+
+        // redeclarable ❌
+        // let a = "ffg";
+
+
+        {
+            // block scope - ✔
+            let a = "inside-block";
+
+            console.log(a);
+        }
+
+        console.log(a);
+
+        // global object(window) ❌
+        console.log(window.a);
+
+
+        */
+
+
+        // ------------------------------------------------
+
+        /*
+
+        // TDZ ✔
+        // console.log(a);
+
+        const a = "some-block";
+
+        // reassignable ❌
+        // a = "outside-block";
+
+        // redeclarable ❌
+        // const a = "ffg";
+
+
+        {
+            // block scope - ✔
+            const a = "inside-block";
+
+            console.log(a);
+        }
+
+        console.log(a);
+
+        // global object(window) ❌
+        console.log(window.a);
+
+
+        */
+
+
+        // creating with var and without var - Both are not same 
+
+        // var a = 10;
+   
+        // a = 10;
+        // window.a = 10;
+
+        // console.log(a);
+
+
+    </script>
+</body>
+
+</html>

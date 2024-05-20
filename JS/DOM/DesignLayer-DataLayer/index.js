@@ -1,6 +1,14 @@
-import data from "./data.js";
+import recipes from "./mockData/recipes.js";
+import blogs from "./mockData/blogs.js";
 
 const doc = document;
+// const section = doc.createElement("section");
+// const img = doc.createElement("img");
+// img.src = "";
+// img.className = "";
+// img.alt = "";
+
+// section.append(img, );
 
 function CardItem(data) {
   const { title, description, author, avatar, image } = data;
@@ -22,11 +30,11 @@ function CardItem(data) {
         </section>`;
 }
 
-const cardList = doc.querySelectorAll(".card-wrapper")[0];
-const cardList2 = doc.querySelectorAll(".card-wrapper")[1];
+const foodCardLists = doc.querySelector(".food-recipe");
+const blogLists = doc.querySelector(".blog");
 
-cardList.innerHTML = data.map(CardItem).join("");
-cardList2.innerHTML = data.map(CardItem).join("");
+foodCardLists.innerHTML = recipes.map(CardItem).join("");
+blogLists.innerHTML = blogs.map(CardItem).join("");
 
 // data.map(function (data, index, arr) {
 //   console.log("data : ", data);

@@ -1,4 +1,4 @@
-const data = [
+const recipes = [
   {
     type: "Cooking Recipe",
     title: "Simple Salad Recipe ever",
@@ -6,8 +6,7 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit velit.",
     avatar:
       "https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D",
-    image:
-      "https://static.toiimg.com/thumb/msid-110053661,width-400,resizemode-4/110053661.jpg",
+    image: "images/dosa.jpg",
     author: "Asoon",
     createdAt: "5 Aug 2023",
   },
@@ -64,4 +63,4 @@ const data = [
 // export const b = "b";
 // export const c = "c";
 
-export default data;
+export default recipes;

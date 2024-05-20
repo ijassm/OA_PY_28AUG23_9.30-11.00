@@ -10,17 +10,18 @@ body {
 }
 
 .max-width {
-  max-width: 1200px;
+  max-width: 1300px;
+  width: 98%;
   margin-inline: auto;
 }
 
-.card-wrapper {
+.card-list {
   display: flex;
   gap: 20px;
 }
 
 .card-item {
-  max-width: 350px;
+  flex-basis: 300px;
   background-color: white;
 }
 
@@ -61,4 +62,20 @@ body {
 
 .profile .details > .subtitle {
   font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  .card-list {
+    flex-wrap: wrap;
+  }
+
+  .card-item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-item {
+    flex-basis: 100%;
+  }
 }

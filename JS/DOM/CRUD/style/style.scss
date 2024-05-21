@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  background-color: rgb(239, 239, 239);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.max-width {
+  max-width: 1300px;
+  width: 98%;
+  margin-inline: auto;
+}
+
+.card-list {
+  display: flex;
+  gap: 20px;
+}
+
+.card-item {
+  flex-basis: 300px;
+  background-color: white;
+
+  .image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 10px;
+
+    .title {
+      font-size: 12px;
+      color: #8b94e8;
+    }
+
+    .description {
+      color: rgba(0, 0, 0, 0.639);
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .avatar {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .details > * {
+        margin-block: 5px;
+
+        > .subtitle {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+// .card-item
+
+// .card-item
+
+// .card-item .content
+
+// .card-item .content
+
+// .card-item .content
+
+// .card-item .content .profile
+
+// .card-item .content .profile
+
+// .profile .details
+
+@media (max-width: 1000px) {
+  .card-list {
+    flex-wrap: wrap;
+  }
+
+  .card-item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-item {
+    flex-basis: 100%;
+  }
+}

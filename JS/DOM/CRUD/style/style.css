@@ -17,6 +17,7 @@ body {
 .card-list {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card-item {
@@ -55,6 +56,15 @@ body {
 }
 .card-item .content .profile .details > * > .subtitle {
   font-size: 10px;
+}
+.card-item .btns .edit-btn,
+.card-item .btns .delete-btn {
+  display: block;
+  padding-block: 5px;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  margin-block: 10px;
 }
 
 @media (max-width: 1000px) {

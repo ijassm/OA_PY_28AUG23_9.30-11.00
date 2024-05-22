@@ -9,15 +9,24 @@ const createdAt = doc.querySelector("form input[id='createdAt']");
 const submitBtn = doc.querySelector(".submit-btn");
 const closeBtn = doc.querySelector(".close-btn");
 const foodCardLists = doc.querySelector(".food-recipe");
-const recipes = [];
+const deleteBtn = doc.querySelector(".card-item  .delete-btn");
 
-function CardItem(data) {
+function deleteCard(index) {
+  const cardList = JSON.parse(localStorage.getItem("array"));
+  const filteredCardList = cardList.filter((_, i) => i !== index);
+  localStorage.setItem("array", JSON.stringify(filteredCardList));
+  render(foodCardLists);
+}
+
+window.deleteCard = deleteCard;
+
+function CardItem(data, index) {
   const { title, type, description, author, avatar, image, createdAt } = data;
   return `<section class="card-item">
             <img class="image" src="${image}" width="100%" alt="img">
             <article class="content">
                 <p class="title">${type}</p>
-                <p>${title}</p>
+                <p>${title}${index}</p>
                 <p class="description">${description}</p>
                 <article class="profile">
                     <img src="${avatar}"
@@ -28,6 +37,10 @@ function CardItem(data) {
                     </div>
                 </article>
             </article>
+            <section class='btns'>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn" onclick='deleteCard(${index})'>Delete</button>
+            </section>
         </section>`;
 }
 
@@ -36,26 +49,30 @@ submitBtn.addEventListener("click", function () {
     type: type.value,
     title: title.value,
     description: description.value,
-    author: avatarName.value,
     avatar: avatarLink.value,
     image: imageLink.value,
+    author: avatarName.value,
     createdAt: createdAt.value,
   };
 
-  //   localStorage.setItem(
-  //     "array",
-  //     JSON.stringify([...localStorage.getItem("array"), data])
-  //   );
+  if (JSON.parse(localStorage.getItem("array"))) {
+    localStorage.setItem(
+      "array",
+      JSON.stringify([...JSON.parse(localStorage.getItem("array")), data])
+    );
+  } else {
+    localStorage.setItem("array", JSON.stringify([data]));
+  }
 
-  //   foodCardLists.innerHTML = JSON.parse(localStorage.getItem("array"))
-  //     .map(CardItem)
-  //     .join("");
-
-  recipes.push(data);
-
-  foodCardLists.innerHTML = recipes.map(CardItem).join("");
+  render(foodCardLists);
 });
 
-// foodCardLists.innerHTML = JSON.parse(localStorage.getItem("array"))
-//   .map(CardItem)
-//   .join("");
+function render(array) {
+  array.innerHTML = JSON.parse(localStorage.getItem("array"))
+    .map(CardItem)
+    .join("");
+}
+
+render(foodCardLists);
+
+// deleteBtn.addEventListener("click", function () {});

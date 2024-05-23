@@ -10,6 +10,10 @@ const submitBtn = doc.querySelector(".submit-btn");
 const closeBtn = doc.querySelector(".close-btn");
 const foodCardLists = doc.querySelector(".food-recipe");
 const deleteBtn = doc.querySelector(".card-item  .delete-btn");
+let edit = {
+  isEdit: false,
+  index: null,
+};
 
 function deleteCard(index) {
   const cardList = JSON.parse(localStorage.getItem("array"));
@@ -18,7 +22,21 @@ function deleteCard(index) {
   render(foodCardLists);
 }
 
+function editCard(index) {
+  const data = JSON.parse(localStorage.getItem("array"))[index];
+  type.value = data.type;
+  title.value = data.title;
+  description.value = data.description;
+  avatarLink.value = data.avatar;
+  imageLink.value = data.image;
+  avatarName.value = data.author;
+  createdAt.value = data.createdAt;
+  edit.isEdit = true;
+  edit.index = index;
+}
+
 window.deleteCard = deleteCard;
+window.editCard = editCard;
 
 function CardItem(data, index) {
   const { title, type, description, author, avatar, image, createdAt } = data;
@@ -38,14 +56,16 @@ function CardItem(data, index) {
                 </article>
             </article>
             <section class='btns'>
-            <button class="edit-btn">Edit</button>
+             <button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@mdo" onclick='editCard(${index})'>Edit</button>
             <button class="delete-btn" onclick='deleteCard(${index})'>Delete</button>
             </section>
         </section>`;
 }
 
-submitBtn.addEventListener("click", function () {
+function submit() {
   const data = {
+    id: Date.now(),
     type: type.value,
     title: title.value,
     description: description.value,
@@ -56,16 +76,25 @@ submitBtn.addEventListener("click", function () {
   };
 
   if (JSON.parse(localStorage.getItem("array"))) {
-    localStorage.setItem(
-      "array",
-      JSON.stringify([...JSON.parse(localStorage.getItem("array")), data])
-    );
+    if (edit && edit.isEdit) {
+      edit.isEdit = false;
+      const cardList = JSON.parse(localStorage.getItem("array"));
+      cardList[edit.index] = data;
+      localStorage.setItem("array", JSON.stringify(cardList));
+    } else {
+      localStorage.setItem(
+        "array",
+        JSON.stringify([...JSON.parse(localStorage.getItem("array")), data])
+      );
+    }
   } else {
     localStorage.setItem("array", JSON.stringify([data]));
   }
 
   render(foodCardLists);
-});
+}
+
+submitBtn.addEventListener("click", submit);
 
 function render(array) {
   array.innerHTML = JSON.parse(localStorage.getItem("array"))
@@ -74,5 +103,3 @@ function render(array) {
 }
 
 render(foodCardLists);
-
-// deleteBtn.addEventListener("click", function () {});
